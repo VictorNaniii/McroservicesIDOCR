@@ -1,0 +1,19 @@
+kafka:
+  brokers:
+    - "kafka:29092"
+  consumer:
+    group_id: "id-ocr-consumer-group"
+    topic: "id-scan-requests"
+    auto_offset_reset: "earliest"
+  producer:
+    topic: "id-scan-results"
+
+ocr:
+  tesseract_data_path: "/usr/share/tesseract-ocr/4.00/tessdata"
+  language: "eng"
+  temp_dir: "/tmp/ocr-images"
+
+service:
+  name: "id-ocr-service"
+  log_level: "info"
+  workers: 5

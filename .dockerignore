@@ -1,0 +1,8 @@
+.git
+.gitignore
+.idea
+*.md
+.dockerignore
+Dockerfile
+docker-compose.yaml
+*.http
